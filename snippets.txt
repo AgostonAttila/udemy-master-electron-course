@@ -1,0 +1,187 @@
+2.
+
+https://electron.atom.io/
+https://github.com/electron/electron-quick-start
+
+https://github.com/lukehoban/es6features#readme
+https://github.com/lukehoban/es6features#let--const
+https://github.com/lukehoban/es6features#arrows
+https://github.com/lukehoban/es6features#template-strings
+
+https://egghead.io/courses/learn-es6-ecmascript-2015
+
+3.
+https://www.npmjs.com/package/electron
+
+npm install -g electron
+npm start
+
+4.
+https://electron.atom.io/docs/tutorial/quick-start/#main-process
+https://electron.atom.io/docs/tutorial/quick-start/#write-your-first-electron-app
+https://electron.atom.io/docs/tutorial/quick-start/#run-your-app
+
+5.
+https://www.npmjs.com/package/electron-reload
+npmi install --save-dev electron reload
+
+electron-packager . //ha más oS re kell akkor megkell adni neki
+electron-packager . --electron-version="1.6.8"
+
+6.
+https://www.npmjs.com/package/bcrypt
+https://electron.atom.io/docs/tutorial/using-native-node-modules/
+
+7.
+https://www.npmjs.com/package/electron-rebuild
+https://www.npmjs.com/package/windows-build-tools
+
+npm install --global -production windows-build-tools
+setx PYTHON "%USERPROFILE%\.windows-build-tools\python27\python.exe
+npm i -g electron-rebuild
+electron-rebuild bcrypt
+
+
+8.
+https://electron.atom.io/devtron/
+npm install --save-dev devtron  
+
+require('devtron').install() consoleban
+https://github.com/GoogleChrome/accessibility-developer-tools/wiki/Audit-Rules
+
+9.
+https://electron.atom.io/docs/api/app/
+
+10.
+https://electron.atom.io/docs/api/browser-window/
+
+11.
+https://electron.atom.io/docs/api/browser-window/#parent-and-child-windows
+
+12.
+https://electron.atom.io/docs/api/frameless-window/
+
+13.
+https://electron.atom.io/docs/api/browser-window/#class-browserwindow
+https://electron.atom.io/docs/api/browser-window/#instance-events
+https://electron.atom.io/docs/api/browser-window/#static-methods
+https://electron.atom.io/docs/api/browser-window/#instance-properties
+https://electron.atom.io/docs/api/browser-window/#instance-methods
+
+14.
+npm i --save electron-window-state
+https://www.npmjs.com/package/electron-window-state
+
+15.
+https://peach.blender.org/download/
+https://electron.atom.io/docs/api/web-contents/
+https://en.wikipedia.org/wiki/Basic_access_authentication
+https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-apache-on-ubuntu-14-04
+
+
+16.
+https://electron.atom.io/docs/api/session/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring
+
+17.
+https://electron.atom.io/docs/api/cookies/
+
+18.
+https://electron.atom.io/docs/api/download-item/
+
+19.
+https://electron.atom.io/docs/api/dialog/
+
+20.
+https://electron.atom.io/docs/api/global-shortcut/
+https://electron.atom.io/docs/api/accelerator/
+
+21.
+https://electron.atom.io/docs/api/menu-item/
+https://electron.atom.io/docs/api/menu/
+
+22.
+https://electron.atom.io/docs/api/native-image/
+https://electron.atom.io/docs/api/menu/#menupopupbrowserwindow-x-y-positioningitem
+
+23.
+https://electron.atom.io/docs/api/native-image/
+https://electron.atom.io/docs/api/tray/
+
+24.
+https://electron.atom.io/docs/api/power-monitor/
+
+25.
+https://electron.atom.io/docs/api/ipc-renderer/
+https://electron.atom.io/docs/api/ipc-main/
+
+26.
+https://nodejs.org/api/globals.html#globals_global
+https://electron.atom.io/docs/api/remote/
+
+27.
+https://developer.mozilla.org/en/docs/Web/API/Document
+https://developer.mozilla.org/en-US/docs/Web/API/Window
+https://developer.mozilla.org/en-US/docs/Web/API/Window/open#Position_and_size_features
+https://developer.mozilla.org/en-US/docs/Web/API/Window/open#Position_and_size_features
+https://electron.atom.io/docs/api/browser-window-proxy/
+
+28.
+https://electron.atom.io/docs/api/web-frame/
+
+29.
+http://stackoverflow.com/questions/3434278/do-dom-tree-elements-with-ids-become-global-variables
+http://2ality.com/2012/08/ids-are-global.html
+https://www.tjvantoll.com/2012/07/19/dom-element-references-as-global-variables/
+https://electron.atom.io/docs/api/webview-tag/
+
+30.
+https://electron.atom.io/docs/api/process/
+https://nodejs.org/api/process.html
+
+31.
+https://electron.atom.io/docs/api/screen/
+
+32.
+https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer
+https://electron.atom.io/docs/api/shell/
+
+33.
+https://en.wikipedia.org/wiki/Data_URI_scheme
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
+https://electron.atom.io/docs/api/native-image/
+
+34.
+https://electron.atom.io/docs/api/clipboard/
+
+35.
+https://electron.atom.io/docs/tutorial/offscreen-rendering/
+
+36.
+https://electron.atom.io/docs/tutorial/online-offline-events/
+https://developer.mozilla.org/en/docs/Online_and_offline_events
+
+37.
+https://developer.mozilla.org/en/docs/Web/API/Battery_Status_API
+
+44.
+https://www.npmjs.com/package/query-string
+
+
+46.
+https://www.npmjs.com/package/electron-packager
+https://github.com/electron-userland/electron-packager/blob/master/docs/api.md
+
+npm install -g electron-packager
+
+electron-packager --help
+
+így láthatóak a fájlok ezért asar-al célszerûbb becsomagolni
+electron-packager . --electron-version="1.6.8" --asar=true
+
+electron-packager . --electron-version="1.6.8" --asar=true --icon=icon --overwrite
+
+
+
+
+

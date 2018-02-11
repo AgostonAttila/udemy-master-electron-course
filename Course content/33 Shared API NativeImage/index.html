@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <img id="logoimg"src="" alt="">
+  </body>
+
+  <script>
+
+const {nativeImage} = require('electron')
+const fs = require('fs')
+
+let logo = nativeImage.createFromPath('c:/Users/Developer/Desktop/1.jpg')
+//FromURL FromBuffer From..
+console.log(logo.getSize());
+fs.writeFile('c:/Users/Developer/Desktop/1.jpg',logo.toJPEG(100))
+
+//console.log(logo.toDataURL());
+let logoSize =logo.getSize()
+
+document.getElementById('logoImg').src = logo.resize({width:logoSize.width/2,height:logoSize.height/2}).toDataURL()
+
+  </script>
+</html>

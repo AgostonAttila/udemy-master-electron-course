@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <style media="screen">
+      .box{
+      border: 5px dashed black;
+      padding:3rem 4rem;
+      float left;
+      }
+      #filebox{
+        background: green;
+        margin-bottom: 1rem;
+      }
+      #trashbox{
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+
+<div class="box" id="filebox">Open File </div>
+<div class="box" id="trashbox">Open</div>
+
+  </body>
+
+  <script>
+
+const {shell} = require('electron')
+
+//shell.openExternal('https://google.com')
+let myfile = null
+
+const fileBox = document.getElementById('filebox')
+const fileBox = document.getElementById('trashbox')
+
+trashbox.ondragover = trashbox.ondragend= trashbox.ondragleave =
+fileBox.ondragover = fileBox.ondragend= fileBox.ondragleave = () =>{
+  return false
+}
+/*
+fileBox.ondrop = (e)=>{
+//  console.log(e.dataTransfer.files)
+  myfile = e.dataTransfer.files[0].path
+  console.log(myfile);
+  return false
+}*/
+
+fileBox.ondrop = (e)=>{
+//  console.log(e.dataTransfer.files)
+  myfile = e.dataTransfer.files[0].path
+  shell.openItem(myfile)
+  return false
+}
+
+trashbox.ondrop = (e)=>{
+//  console.log(e.dataTransfer.files)
+myfile = e.dataTransfer.files[0].path
+shell.moveItemToTrash(myfile)
+  return false
+}
+
+  </script>
+</html>

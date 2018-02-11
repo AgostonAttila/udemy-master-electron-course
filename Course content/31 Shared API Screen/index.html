@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <style media="screen">
+      html, body {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body onclick="showClickPoint()">
+    <h1>Hello World!</h1>
+  </body>
+
+  <script>
+
+const electron = require('electron')
+const displays = electron.screen.getAllDisplays()
+
+console.log(displays[0].size.width,displays[0].size.height);
+console.log(displays[0].bounds.x,displays[0].bounds.y);
+
+electron.screen.on('display-metrics-changed',(e,display,changeMetrics)=>{
+  console.log(display);
+  console.log(changeMetrics);
+})
+
+function showClickPoint(){
+  console.log(electron.screen.getCursorScreenPoint());
+}
+  </script>
+</html>

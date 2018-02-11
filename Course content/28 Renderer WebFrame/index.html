@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>WebFrame</h1>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Two_adult_Guinea_Pigs_%28Cavia_porcellus%29.jpg" alt="">
+  <hr>
+  <button id="zoom_up"   type="button" name="button">Increase Zoom</button>
+  <button id="zoom_down" type="button" name="button">Decrease Zoom</button>
+  <button id="zoom_reset" type="button" name="button">Reset Zoom</button>
+
+<img src="http://placehold.it/300x300" alt="">
+
+<textarea id="code" name="name" rows="8" cols="80"></textarea>
+<button id="run_js" type="button" name="button">Run JS</button>
+
+  </body>
+
+  <script>
+const {webFrame} = require('electron')
+let zoom = 0
+
+document.getElementById('zoom_up').addEventListener('click',()=>{
+webFrame.setZoomLevel(++zoom)
+})
+
+document.getElementById('zoom_down').addEventListener('click',()=>{
+webFrame.setZoomLevel(--zoom)
+})
+
+document.getElementById('zoom_reset').addEventListener('click',()=>{
+webFrame.setZoomLevel(zoom==0)
+})
+
+document.getElementById('run_js').addEventListener('click',()=>{
+webFrame.executeJavaScript('code').value
+})
+
+let resourceUsage =webFrame.getResourceUsage()
+console.log(resourceUsage);
+
+
+  </script>
+</html>

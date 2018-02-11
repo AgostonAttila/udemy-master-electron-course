@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <style media="screen">
+      webview{
+        height: 500px;
+        border: 1px solid grey;
+      }
+    </style>
+  </head>
+  <body>
+  <webview id='webview1' src="page1.html"></webview>
+  <hr>
+  <input id="url" type="text" placeholder="URL to Load" name="" value="">
+  <button id="load" type="button" name="button"></button>
+  </body>
+
+  <script>
+
+const webview = document.getElementById('webview1')
+
+webview.addEventListener('did-start-loading',()=>{
+  console.log('started loading');
+})
+
+webview.addEventListener('did-stop-loading',()=>{
+  console.log('finished loading');
+  webview.insertCSS('body{background:orange !important;}')
+})
+
+//ID-t el lehet érni ezért csak loadként tudok hivatkozni rá
+const url= document.getElementById('url')
+
+load.addEventListener('click',()=>{
+console.log('started loading webview');
+webview.loadURL(url.value);
+url.value =''
+})
+
+webview.addEventListener('did-navigate',(e)=>{
+currentPage.innerHTML = e.url
+})
+
+webview.addEventListener('did-navigate',(e)=>{
+currentPage.innerHTML = 'fail to load URL'
+})
+
+  </script>
+</html>
